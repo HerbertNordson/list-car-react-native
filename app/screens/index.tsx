@@ -1,5 +1,5 @@
-import Home from "./home";
-import Login from "./login";
-import Skus from "./skus";
+import  Home  from "./Home";
+import  Login  from "./Login";
+import  Skus  from "./Skus";
 
 export { Login, Home, Skus };
