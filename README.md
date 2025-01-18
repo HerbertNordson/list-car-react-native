@@ -28,13 +28,13 @@ Cartalog é um aplicativo desenvolvido em **React Native** que permite listar ma
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/cartalog.git
+   git clone https://github.com/HerbertNordson/list-car-react-native.git
    ```
 
 2. Navegue até o diretório do projeto:
 
    ```bash
-   cd cartalog
+   cd list-car-react-native
    ```
 
 3. Instale as dependências do projeto:
@@ -119,6 +119,6 @@ Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICEN
 
 Caso tenha dúvidas ou sugestões, entre em contato:
 
-- **E-mail:** seu-email@exemplo.com
-- **GitHub:** [seu-usuario](https://github.com/seu-usuario)
+- **E-mail:** herbert_nordson@hotmail.com
+- **GitHub:** [seu-usuario](https://github.com/HerbertNordson)
 
