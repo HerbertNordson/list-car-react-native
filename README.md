@@ -1,50 +1,124 @@
-# Welcome to your Expo app 👋
+# Cartalog
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Cartalog é um aplicativo desenvolvido em **React Native** que permite listar marcas de veículos e seus modelos. O objetivo é proporcionar uma experiência intuitiva e rápida para visualizar informações sobre diferentes fabricantes de automóveis.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Listagem de marcas de veículos.
+- Exibição dos modelos de cada marca.
+- Interface simples e amigável.
 
+## Tecnologias Utilizadas
+
+- **React Native**: Para o desenvolvimento do aplicativo móvel.
+- **TypeScript**: Para uma base de código mais confiável e robusta.
+- **Axios**: Para consumo de APIs.
+- **React Navigation**: Para a navegação entre telas.
+- **Async Storage**: Para armazenamento local de dados (opcional).
+
+## Imagens do aplicativo
+
+<img width="308" alt="Captura de Tela 2025-01-17 às 21 16 32" src="https://github.com/user-attachments/assets/74de3d70-6032-43f0-844e-d20c08004e21" />
+<img width="310" alt="Captura de Tela 2025-01-17 às 21 16 52" src="https://github.com/user-attachments/assets/a3712020-7a78-42f0-b52d-d7b17e7ff87b" />
+<img width="315" alt="Captura de Tela 2025-01-17 às 21 17 03" src="https://github.com/user-attachments/assets/f496832b-7bc2-43fe-96df-93b8d520ad81" />
+
+
+## Instalação e Execução
+
+1. Clone este repositório:
+
+   ```bash
+   git clone https://github.com/seu-usuario/cartalog.git
+   ```
+
+2. Navegue até o diretório do projeto:
+
+   ```bash
+   cd cartalog
+   ```
+
+3. Instale as dependências do projeto:
+
+   Com Yarn:
+   ```bash
+   yarn install
+   ```
+
+   Ou com NPM:
    ```bash
    npm install
    ```
 
-2. Start the app
+4. Execute o aplicativo:
 
+   Com Yarn:
    ```bash
-    npx expo start
+   yarn start
    ```
 
-In the output, you'll find options to open the app in a
+   Ou com NPM:
+   ```bash
+   npm start
+   ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+5. Para emular o aplicativo:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+   - No Android:
+     ```bash
+     yarn android
+     ```
+     ou
+     ```bash
+     npm run android
+     ```
 
-## Get a fresh project
+   - No iOS (requer um ambiente de desenvolvimento macOS com Xcode configurado):
+     ```bash
+     yarn ios
+     ```
+     ou
+     ```bash
+     npm run ios
+     ```
 
-When you're ready, run:
+## Estrutura do Projeto
 
-```bash
-npm run reset-project
+```plaintext
+src
+├── components   # Componentes reutilizáveis do projeto.
+├── screens      # Telas principais do aplicativo.
+├── services     # Serviços como consumo de APIs.
+├── utils        # Funções utilitárias.
+└── assets       # Recursos como imagens e ícones.
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Contribuição
 
-## Learn more
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
 
-To learn more about developing your project with Expo, look at the following resources:
+1. Fork o repositório.
+2. Crie uma nova branch para sua feature ou bugfix:
+   ```bash
+   git checkout -b minha-feature
+   ```
+3. Commit suas alterações:
+   ```bash
+   git commit -m "Adiciona minha nova feature"
+   ```
+4. Push para a branch:
+   ```bash
+   git push origin minha-feature
+   ```
+5. Abra um Pull Request.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Licença
 
-## Join the community
+Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-Join our community of developers creating universal apps.
+## Contato
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Caso tenha dúvidas ou sugestões, entre em contato:
+
+- **E-mail:** seu-email@exemplo.com
+- **GitHub:** [seu-usuario](https://github.com/seu-usuario)
+
