@@ -14,6 +14,10 @@ import Routes from "@/routes";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
 
+import "react-native-gesture-handler";
+import { UserProvider } from "@/contexts/user";
+import { AuthProvider } from "@/contexts/auth";
+
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
@@ -35,7 +39,11 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Routes />
+      <AuthProvider>
+        <UserProvider>
+          <Routes />
+        </UserProvider>
+      </AuthProvider>
     </ThemeProvider>
   );
 }

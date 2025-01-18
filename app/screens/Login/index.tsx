@@ -13,30 +13,52 @@ import {
   Title,
 } from "@/components/ui/styles/global";
 
+import { IAuth } from "@/types/auth";
+import { Auth } from "@/services/api/auth";
+
 import { ContainerEye, ContentLogin, ContentLogo, Eye } from "./style";
 
-type ILogin = {
-  email: string;
-  password: string;
-};
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { DetailsScreenProps } from "@/types/routes";
+import { useUserContext } from "@/contexts/user";
+import { IUser } from "@/types/user";
+import { useAuthContext } from "@/contexts/auth";
 
-export default function Login() {
+const Login: React.FC<DetailsScreenProps> = ({ navigation }) => {
   const [openEye, setOpenEye] = useState<boolean>(true);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const { control, handleSubmit } = useForm<ILogin>({
+  const { auth } = Auth();
+  const { setUser } = useUserContext();
+  const { login } = useAuthContext();
+
+  const { control, handleSubmit } = useForm<IAuth>({
     defaultValues: {
-      email: "",
+      user: "",
       password: "",
     },
   });
 
-  const onsubmit = async (values: ILogin) => {
+  const onsubmit = async (values: IAuth) => {
     setIsLoading(true);
-    console.log(values);
-    setInterval(() => {
-      setIsLoading(false);
-    }, 3000);
+
+    const data: IAuth = {
+      user: values.user,
+      password: values.password,
+    };
+
+    const res = await auth(data);
+
+    if (!res?.error && res?.user) {
+      setUser(res.user);
+      login(res.user.token);
+    }
+
+    if (res?.error) {
+      alert(res?.message);
+    }
+
+    setIsLoading(false);
   };
 
   return (
@@ -48,7 +70,7 @@ export default function Login() {
         </ContentLogo>
         <Controller
           control={control}
-          name="email"
+          name="user"
           render={({ field }) => (
             <Input
               autoCapitalize="none"
@@ -83,4 +105,6 @@ export default function Login() {
       </ContentLogin>
     </ContainerView>
   );
-}
+};
+
+export default Login;
