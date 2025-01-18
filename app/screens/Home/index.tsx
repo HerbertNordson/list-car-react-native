@@ -1,10 +1,10 @@
-import { Container, Title } from "@/components/ui/styles/global";
+import { Container } from "@/components/ui/styles/global";
 import { BrandsApi } from "@/services/api/brands";
 import { DetailsScreenProps } from "@/types/routes";
 import { useEffect, useState } from "react";
-import { Text, FlatList, ActivityIndicator } from "react-native";
-import { Card, CardCode, CardTitle } from "./style";
+import { FlatList, ActivityIndicator } from "react-native";
 import { Header } from "@/components/theme/Header";
+import { Card, CardCode, CardTitle } from "@/components/theme/Card";
 
 const Home: React.FC<DetailsScreenProps> = ({ navigation }) => {
   const [data, setData] = useState<Array<Model>>([] as Array<Model>);
