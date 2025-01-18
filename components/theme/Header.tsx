@@ -7,6 +7,7 @@ import { IHeader } from "@/types/header";
 
 import { useAuthContext } from "@/contexts/auth";
 import { IUser } from "@/types/user";
+import { HeaderContainer } from "../ui/styles/header";
 
 export const Header = ({ page }: IHeader) => {
   const { user, setUser } = useUserContext();
@@ -14,16 +15,8 @@ export const Header = ({ page }: IHeader) => {
 
   return (
     <View>
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "space-between",
-          width: "90%",
-          margin: "auto",
-        }}
-      >
-        <Paragraph>Olá, {user.name}!</Paragraph>
+      <HeaderContainer>
+        <Paragraph>Hey, {user.name}!</Paragraph>
         <TouchableOpacity
           onPress={async () => {
             setUser({} as IUser);
@@ -32,7 +25,7 @@ export const Header = ({ page }: IHeader) => {
         >
           <Feather name="log-out" size={30} />
         </TouchableOpacity>
-      </View>
+      </HeaderContainer>
       <Title>{page}</Title>
     </View>
   );
